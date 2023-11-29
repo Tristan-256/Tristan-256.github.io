@@ -1,48 +1,61 @@
 body {
     background-color: #c28a2eb9;
-   }
-   
-   .body {
+}
+
+.body {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 100px;
-   }
-   
-   h2 {
+}
+
+h2 {
     animation: 1s blink linear infinite;
     display: flex;
     justify-content: center;
-   }
-   
-   .birthdayCard {
+}
+
+.birthdayCard {
     position: relative;
-    width: 250px;
-    height: 350px;
+    width: 355px;
+    height: 500px;
     cursor: pointer;
     transform-style: preserve-3d;
     transform: perspective(2500px);
     transition: 1s;
-   }
-   
-   .cardFront {
+}
+
+.cardFront {
     position: relative;
-    background-color: #fff;
-    width: 250px;
-    height: 350px;
+    background-image: url("image3.png");
+    background-size: cover;
+    width: 355px;
+    height: 500px;
     overflow: hidden;
     transform-origin: left;
     box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 30px 0 50px rgba(0, 0, 0, 0.4);
     transition: .6s;
-   }
-   
-   .happy {
+}
+
+.happy {
     font-family: Tahoma, sans-serif;
+    font-size: 30px;
+    color: #333;
     text-align: center;
     margin: 30px;
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-    transition: .1s;
-   }
+    transition: 0.001s;
+    animation: 3s colorChange infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #FDFCFB ;
+    }
+    100% {
+        color: #E2D1C3;
+    }
+}
+    
    
    .balloons {
     position: absolute;
@@ -66,20 +79,20 @@ body {
    
    .balloonTwo {
     background-color: rgb(6, 214, 160, 0.7);
-    left: 50px;
-    top: 20px;
+    left: 30px;
+    top: -20px;
    }
    
    .balloonThree {
     background-color: rgb(255, 209, 102, 0.7);
-    left: 110px;
-    top: 50px;
+    left: 230px;
+    top: -30px;
    }
    
    .balloonFour {
     background-color: rgb(17, 138, 178, 0.7);
-    left: 170px;
-    top: 20px;
+    left: 290px;
+     top: 20px;
    }
    
    .balloonOne:before,
@@ -122,12 +135,13 @@ body {
    .balloonFour:after {
     border-bottom: 10px solid #118ab2;
    }
+
    
    .cardInside {
     position: absolute;
     background-color: #fff;
-    width: 250px;
-    height: 350px;
+    width: 355px;
+    height: 500px;
     z-index: -1;
     left: 0;
     top: 0;
@@ -142,8 +156,8 @@ body {
    
    .name {
     position: absolute;
-    left: 130px;
-    /* top: 200px; */
+    left: 60%;
+    top: 80%;
     color: #333;
     text-decoration: underline;
    }
@@ -161,16 +175,7 @@ body {
     transform: perspective(2500px) rotate(5deg);
     box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
    }
-   
-   .birthdayCard:active {
-    transform: perspective(2500px) rotate(-5deg);
-    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
-   }
 
-   .touch .birthdayCard{
-    transform: perspective(2500px) rotate(5deg);
-    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
-   }
    .birthdayCard:hover .cardFront {
     transform: rotateY(-160deg);
    }
