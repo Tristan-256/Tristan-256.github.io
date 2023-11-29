@@ -142,7 +142,7 @@ body {
    
    .name {
     position: absolute;
-    left: 150px;
+    left: 130px;
     /* top: 200px; */
     color: #333;
     text-decoration: underline;
@@ -179,32 +179,7 @@ body {
     visibility: hidden;
    }
    
-   @keyframes blink {
-    0% {
-     color: white;
-    }
-   
-    20% {
-     color: yellow;
-    }
-   
-    40% {
-     color: greenyellow;
-    }
-   
-    60% {
-     color: red;
-    }
-   
-    80% {
-     color: hotpink;
-    }
-   
-    100% {
-     color: blue;
-    }
-   }
-   footer{
+    footer{
     font-size: 10px;
     color: white;
     position: absolute;
